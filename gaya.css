@@ -1,0 +1,428 @@
+/* Global Styles */
+
+html {
+    scroll-behavior: smooth; /* Membuat scroll menjadi halus */
+  }
+  
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%; /* Pastikan header mengambil lebar penuh */
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Opsional */
+}
+
+
+/* Navbar Styling */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: #fff;
+}
+
+/* Overlay Gelap */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-img {
+    height: 75px;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Logo */
+.logo-img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Teks di Tengah Navbar */
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.navbar-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1e88e5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar-text:hover {
+    color: #43a047;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1e88e5;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #43a047;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* Atur tinggi Hero Section */
+}
+
+.hero-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Transisi geser */
+  will-change: transform;
+}
+
+.hero-slide {
+  min-width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero Text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Navigasi */
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Menggunakan Font Sans-Serif Bold */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.hero-text h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px; /* Ukuran font lebih besar agar lebih menonjol */
+    font-weight: 700; /* Bold untuk memberikan kesan tegas */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Memberikan jarak antar huruf */
+    margin: 0;
+    color: #00c307;
+    animation: fadeInEffect 1.5s ease-out; /* Menggunakan animasi fadeInEffect */
+}
+
+/* Efek hover untuk teks hero */
+.hero-text h1:hover {
+    color: #ffffff; /* Perubahan warna saat hover */
+    transform: translateY(-5px) scale(1.05); /* Efek sedikit membesar dan naik */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transisi halus */
+}
+
+/* Responsif untuk Tablet (768px ke bawah) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar-center {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+}
+
+/* Responsif untuk Smartphone (480px ke bawah) */
+@media screen and (max-width: 480px) {
+    .logo-img {
+        height: 50px;
+    }
+
+    .navbar-text {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
+
+/* Gaya untuk Topics Section */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topics {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .topics h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .topic-card {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .topic-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .topic-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+
+/* Reset CSS untuk menghindari efek browser default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #333;
+  }
+  
+  /* Kontainer Utama */
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  /* Bagian Teks */
+  .about-text {
+    flex: 1 1 500px;
+    line-height: 1.6;
+  }
+  
+  .about-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0d47a1;
+  }
+  
+  .about-description {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .about-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 5px 0;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  /* Gaya Gambar */
+  .about-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsif - Mobile View */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text,
+    .about-image {
+      flex: 1 1 100%;
+    }
+  
+    .about-img {
+      margin: 20px 0;
+    }
+  }  
+
+  /* Efek animasi untuk gambar tentang kami */
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efek hover */
+  .about-img:hover {
+    transform: scale(1.1); /* Membesarkan gambar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Memperjelas bayangan */
+  }
+  
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px;
+    background: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #1565c0;
+}
+
+/* Footer */
+.footer {
+    background: #1e88e5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1b1b; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks */
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px #1e88e5; /* Memberikan efek bayangan */
+  z-index: 1000; /* Memastikan footer berada di atas elemen lain */
+}

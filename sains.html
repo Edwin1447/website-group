@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Website</title>
+    <link rel="stylesheet" href="sains.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Website Logo" class="logo-img">
+            </div>
+            <div class="navbar-center">
+                <span class="navbar-text">EduSphere</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <p style="text-align: center; margin-bottom: 20px;">
+            <h2>Jelajahi dunia sains dengan memahami konsep fisika, biologi, dan fenomena alam dengan cara yang interaktif dan mudah dipahami.
+            </h></p>
+        <div class="content-section">
+            <!-- Fisika Section -->
+            <div class="content-box">
+                <h2>Fisika: Memahami Pergerakan dan Energi</h2>
+                <img src="fisika.jpeg" alt="Fisika">
+                <p>
+                    Fisika adalah cabang ilmu yang mempelajari materi, energi, dan interaksi antara keduanya.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('fisika')">Detail</button>
+                <div id="fisika-details" class="details" style="display:none;">
+                    <p>Fisika mencakup berbagai konsep seperti mekanika, termodinamika, dan elektromagnetisme. Dengan fisika, kita dapat memahami bagaimana dunia ini bekerja, mulai dari gerak benda hingga perilaku partikel subatomik.</p>
+                </div>
+            </div>
+
+            <!-- Biologi Section -->
+            <div class="content-box">
+                <h2>Biologi: Keajaiban Kehidupan</h2>
+                <img src="biologi.jpeg" alt="Biologi">
+                <p>
+                    Biologi mempelajari makhluk hidup, struktur tubuh, dan lingkungan tempat mereka hidup.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('biologi')">Detail</button>
+                <div id="biologi-details" class="details" style="display:none;">
+                    <p>Biologi mencakup studi tentang sel, genetika, evolusi, ekosistem, dan hubungan antar makhluk hidup. Ilmu ini membantu kita memahami kehidupan dari skala mikroskopis hingga ekosistem global.</p>
+                </div>
+            </div>
+
+            <!-- Fenomena Alam Section -->
+            <div class="content-box">
+                <h2>Fenomena Alam: Alam yang Menakjubkan</h2>
+                <img src="fenomena.jpeg" alt="Fenomena Alam">
+                <p>
+                    Fenomena alam adalah kejadian yang terjadi di lingkungan alam seperti tornado dan gempa bumi.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('fenomena')">Detail</button>
+                <div id="fenomena-details" class="details" style="display:none;">
+                    <p>Fenomena alam mencakup berbagai kejadian seperti siklon, aurora, gunung berapi, dan gempa bumi. Fenomena ini sering kali mencerminkan keindahan sekaligus kekuatan alam.</p>
+                </div>
+            </div>
+
+            <!-- Kimia Section -->
+            <div class="content-box">
+                <h2>Kimia: Reaksi dan Zat</h2>
+                <img src="kimia.jpeg" alt="Kimia">
+                <p>
+                    Kimia adalah ilmu yang mempelajari komposisi, struktur, sifat, dan perubahan materi.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('kimia')">Detail</button>
+                <div id="kimia-details" class="details" style="display:none;">
+                    <p>Kimia melibatkan studi tentang unsur-unsur, senyawa, dan reaksi kimia. Dengan memahami kimia, kita dapat menciptakan teknologi baru seperti baterai, obat-obatan, dan material modern.</p>
+                </div>
+            </div>
+
+            <!-- Astronomi Section -->
+            <div class="content-box">
+                <h2>Astronomi: Eksplorasi Luar Angkasa</h2>
+                <img src="astronomi.jpeg" alt="Astronomi">
+                <p>
+                    Astronomi mempelajari bintang, planet, galaksi, dan fenomena luar angkasa lainnya.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('astronomi')">Detail</button>
+                <div id="astronomi-details" class="details" style="display:none;">
+                    <p>Astronomi membantu kita memahami alam semesta, termasuk asal-usul planet, bintang, dan fenomena seperti supernova dan lubang hitam. Teknologi teleskop modern memungkinkan eksplorasi mendalam terhadap kosmos.</p>
+                </div>
+            </div>
+
+            <!-- Geografi Section -->
+            <div class="content-box">
+                <h2>Geografi: Bentuk dan Pola Bumi</h2>
+                <img src="geografi.jpeg" alt="Geografi">
+                <p>
+                    Geografi mempelajari bentuk, pola, dan dinamika permukaan bumi.
+                </p>
+                <a href="daftar.html" class="button-learn">Pelajari Lebih Lanjut</a>
+                <button class="detail-btn" onclick="showDetails('geografi')">Detail</button>
+                <div id="geografi-details" class="details" style="display:none;">
+                    <p>Geografi mencakup studi tentang iklim, topografi, sumber daya alam, dan hubungan manusia dengan lingkungannya. Dengan geografi, kita dapat memahami distribusi populasi dan pola migrasi manusia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk Detail -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Detail Materi</h3>
+            <ul id="modal-list">
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 EduSphere. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Website</title>
+    <link rel="stylesheet" href="gaya.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="overlay"></div> <!-- Overlay Gelap -->
+            <a href="index.html">
+            <div class="logo">
+                <img src="logo.png" alt="Website Logo" class="logo-img">
+            </div>
+        </a>
+
+            <div class="navbar-center">
+                <span class="navbar-text">EduSphere</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-carousel">
+        <div class="hero-slide" style="background-image: url('books.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('tekno.png');"></div>
+        <div class="hero-slide" style="background-image: url('teknologi.png');"></div>
+    </div>
+    <div class="hero-text">
+        <h1>Edukasi untuk Masa Depan yang Lebih Baik</h1>
+    </div>
+    <!-- Tombol Navigasi -->
+    <div class="hero-nav">
+        <button class="nav-btn left-btn">&#10094;</button>
+        <button class="nav-btn right-btn">&#10095;</button>
+    </div>
+</section>
+
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics">
+    <h2>Topik Pilihan Kami</h2>
+    <div class="topics-grid">
+        <div class="topic-card">
+            <a href="teknologi.html">
+                <img src="teknologi.jpg" alt="Teknologi" class="topic-img">
+                <h3>Teknologi</h3>
+            </a>
+            <p>Belajar tentang kecerdasan buatan, pengembangan web, dan tren teknologi terbaru.</p>
+        </div>
+        <div class="topic-card">
+            <a href="sains.html">
+                <img src="sains.jpg" alt="Sains" class="topic-img">
+                <h3>Sains</h3>
+            </a>
+            <p>Memahami fisika, biologi, dan fenomena alam dengan cara yang mudah dipahami.</p>
+        </div>
+        <div class="topic-card">
+            <a href="develop.html">
+                <img src="pengembangan.jpg" alt="Pengembangan Diri" class="topic-img">
+                <h3>Pengembangan Diri</h3>
+            </a>
+            <p>Tingkatkan keterampilan komunikasi, manajemen waktu, dan kreativitas Anda.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" class="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2 class="about-title">Mengapa Memilih EduSphere?</h2>
+        <p class="about-description">
+          EduSphere hadir untuk membantu semua kalangan mengakses pendidikan berkualitas dengan metode yang interaktif dan inovatif. 
+          Kami percaya bahwa pendidikan adalah fondasi masa depan yang lebih baik dan inklusif untuk semua orang.
+        </p>
+        <ul class="about-list">
+          <li><strong>Visi Kami:</strong> Mendorong pembelajaran sepanjang hayat dan menciptakan pemimpin masa depan.</li>
+          <li><strong>Misi Kami:</strong> Menyediakan sumber daya belajar berkualitas yang mudah diakses dan ramah pengguna.</li>
+          <li><strong>Metode Interaktif:</strong> Menggunakan teknologi terkini untuk menciptakan pengalaman belajar yang menyenangkan.</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="Designer.jpeg" alt="Tentang Kami" class="about-img">
+      </div>
+    </div>
+  </section>
+  
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Ada pertanyaan, saran, atau ingin berkolaborasi? Kami ingin mendengarnya dari Anda!</p>
+        <form>
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan Anda" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.hero-carousel');
+            const slides = document.querySelectorAll('.hero-slide');
+            const totalSlides = slides.length;
+            let index = 0;
+        
+            // Tombol navigasi
+            const leftBtn = document.querySelector('.left-btn');
+            const rightBtn = document.querySelector('.right-btn');
+        
+            // Geser ke kiri
+            leftBtn.addEventListener('click', function() {
+                index = (index > 0) ? index - 1 : totalSlides - 1; // Geser ke kiri
+                updateCarousel();
+            });
+        
+            // Geser ke kanan
+            rightBtn.addEventListener('click', function() {
+                index = (index + 1) % totalSlides; // Geser ke kanan
+                updateCarousel();
+            });
+        
+            // Perbarui tampilan carousel
+            function updateCarousel() {
+                const offset = -index * 100; // Geser berdasarkan indeks
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+        });
+        </script>
+        
+
+    <footer class="footer">
+        <p>© 2024 EduSphere. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+</html>

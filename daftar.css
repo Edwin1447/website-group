@@ -1,0 +1,107 @@
+/* Mengatur tampilan global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Warna latar belakang lembut */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tinggi halaman penuh */
+  }
+  
+  h2 {
+    color: #333; /* Judul form lebih kontras */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Kontainer utama form */
+  .form-container {
+    background-color: #ffffff; /* Warna latar form */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    width: 100%;
+    max-width: 400px; /* Batas maksimal lebar */
+    box-sizing: border-box;
+  }
+  
+  /* Label elemen input */
+  label {
+    display: block;
+    font-size: 14px;
+    color: #555; /* Warna teks label */
+    margin-bottom: 8px;
+  }
+  
+  /* Input teks */
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Fokus pada input */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus {
+    border-color: #007bff; /* Warna fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Dropdown select */
+  select {
+    background-color: #fff; /* Warna latar dropdown */
+    appearance: none; /* Hilangkan panah default */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTYgNEw0IDZMMiA0IiBmaWxsPSIjY2NjIi8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    padding-right: 30px; /* Memberikan ruang untuk panah */
+  }
+  
+  /* Tombol daftar */
+  .btn-primary {
+    background-color: #007bff; /* Warna biru primer */
+    color: #ffffff; /* Warna teks putih */
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efek hover tombol */
+  .btn-primary:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    select,
+    .btn-primary {
+      font-size: 14px;
+    }
+  }  
